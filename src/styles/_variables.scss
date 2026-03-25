@@ -3,19 +3,19 @@ $color-primary: #F00;
 $color-secondary: #666;
 $color-bg: #fff;
 :root {
-  --color-bg-dark:      #111111;   /* Fond noir principal */
-  --color-bg-section:   #1a1a1a;   /* Fond légèrement plus clair */
-  --color-bg-card:      #ffffff;   /* Fond des cartes blanches */
-  --color-bg-footer:    #222222;   /* Fond du footer */
-  --color-accent-gold:  #f5c518;   /* Jaune/or (boutons, titres) */
-  --color-accent-purple:#6c3fc5;   /* Violet (icônes, scores) */
+  --color-bg-dark:      #0B243B;   /* Fond noir principal */
+  --color-bg-section:   #0b2e4e;   /* Fond légèrement plus clair */
+  --color-bg-card:      #67ACED;   /* Fond des cartes blanches */
+  --color-bg-footer:    #0B243B;   /* Fond du footer */
+  --color-accent-gold:  #FB6CA5;   /* Jaune/or (boutons, titres) */
+  --color-accent-purple:#4719C8;   /* Violet (icônes, scores) */
   --color-text-light:   #ffffff;   /* Texte blanc */
   --color-text-dark:    #111111;   /* Texte noir */
   --color-text-muted:   #aaaaaa;   /* Texte grisé */
-  --color-nav-active:   #ffffff;   /* Fond du lien actif dans la nav */
-  --color-border:       #333333;   /* Bordure séparatrice */
-  --color-leaderboard-link: #5b9bd5; /* Bleu des liens du leaderboard */
-  --color-score:        #5b9bd5;   /* Bleu du score 20/20 */
+  --color-nav-active:   #70B6F7;   /* Fond du lien actif dans la nav */
+  --color-border:       #4719C8;   /* Bordure séparatrice */
+  --color-leaderboard-link: #4719C8; /* Bleu des liens du leaderboard */
+  --color-score:        #4719C8;   /* Bleu du score 20/20 */
 
   --font-title:         'Oswald', sans-serif;   /* Police des grands titres */
   --font-body:          'Lato', sans-serif;      /* Police du texte courant */

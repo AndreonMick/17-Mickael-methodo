@@ -48,19 +48,19 @@ a {
   font-style: normal;
 }
 :root {
-  --color-bg-dark: #111111; /* Fond noir principal */
-  --color-bg-section: #1a1a1a; /* Fond légèrement plus clair */
-  --color-bg-card: #ffffff; /* Fond des cartes blanches */
-  --color-bg-footer: #222222; /* Fond du footer */
-  --color-accent-gold: #f5c518; /* Jaune/or (boutons, titres) */
-  --color-accent-purple:#6c3fc5; /* Violet (icônes, scores) */
+  --color-bg-dark: #0B243B; /* Fond noir principal */
+  --color-bg-section: #0b2e4e; /* Fond légèrement plus clair */
+  --color-bg-card: #67ACED; /* Fond des cartes blanches */
+  --color-bg-footer: #0B243B; /* Fond du footer */
+  --color-accent-gold: #FB6CA5; /* Jaune/or (boutons, titres) */
+  --color-accent-purple:#4719C8; /* Violet (icônes, scores) */
   --color-text-light: #ffffff; /* Texte blanc */
   --color-text-dark: #111111; /* Texte noir */
   --color-text-muted: #aaaaaa; /* Texte grisé */
-  --color-nav-active: #ffffff; /* Fond du lien actif dans la nav */
-  --color-border: #333333; /* Bordure séparatrice */
-  --color-leaderboard-link: #5b9bd5; /* Bleu des liens du leaderboard */
-  --color-score: #5b9bd5; /* Bleu du score 20/20 */
+  --color-nav-active: #70B6F7; /* Fond du lien actif dans la nav */
+  --color-border: #4719C8; /* Bordure séparatrice */
+  --color-leaderboard-link: #4719C8; /* Bleu des liens du leaderboard */
+  --color-score: #4719C8; /* Bleu du score 20/20 */
   --font-title: 'Oswald', sans-serif; /* Police des grands titres */
   --font-body: 'Lato', sans-serif; /* Police du texte courant */
 }
@@ -165,11 +165,11 @@ body {
    La grande bannière en haut avec le titre et les boutons
 ============================================================ */
 .hero {
-  height: 30rem;
+  height: 25rem;
   width: 100%;
   background-image: url("../images/Frame 1.png");
   background-size: 100%;
-  background-size: contain;
+  background-size: auto 15rem;
 }
 
 /* Le grand titre principal */
@@ -182,11 +182,11 @@ body {
   color: var(--color-text-light);
   line-height: 1.1;
   display: flex;
-  width: auto;
+  justify-content: center;
   align-items: center;
+  text-align: center;
   margin-block-end: 2rem;
   padding-block-start: 5rem;
-  padding-inline-start: 5rem;
   /* Effet de contour sur les lettres */
   -webkit-text-stroke: 1px rgba(255, 255, 255, 0.3);
 }
@@ -195,6 +195,7 @@ body {
 .hero__title-accent {
   color: var(--color-accent-gold);
   -webkit-text-stroke: 0; /* Supprime le contour sur ce mot */
+  padding: 1rem;
 }
 
 /* Le sous-titre descriptif */
@@ -305,7 +306,7 @@ body {
    2 colonnes : leaderboard à gauche | citation à droite
 ============================================================ */
 .bottom {
-  background-color: #f5f5f0; /* Fond légèrement crème */
+  background-color: #75A0C8; /* Fond légèrement crème */
   padding: 60px 100px;
   display: grid;
   grid-template-columns: 1fr 1fr; /* 2 colonnes égales */
@@ -343,7 +344,7 @@ body {
 /* Le numéro (1. 2. 3.) */
 .leaderboard__rank {
   min-width: 20px;
-  color: #777777;
+  color: #4719C8;
 }
 
 /* Le nom du joueur + score */
@@ -359,14 +360,14 @@ body {
 
 /* La date à droite */
 .leaderboard__date {
-  color: #999999;
+  color: #4719C8;
   font-size: 0.8rem;
 }
 
 /* -------- Quote (colonne droite) -------- */
 /* La séparation verticale entre les deux colonnes */
 .quote-block {
-  border-left: 1px solid #cccccc;
+  border-left: 1px solid #FB6CA5;
   padding-left: 60px;
   display: flex;
   flex-direction: column;
@@ -379,7 +380,7 @@ body {
 .quote-block__text {
   font-size: 1.3rem;
   font-style: italic;
-  color: #333333;
+  color: #0B243B;
   line-height: 1.6;
 }
 
@@ -400,16 +401,15 @@ body {
 
 /* La ligne "— Guess the movie!" */
 .quote-block__cta {
-  color: #555555;
+  color: #4719C8;
   font-size: 1rem;
 }
 
 /* Le bouton "REVEAL ANSWER" */
 .quote-block__btn {
   padding: 10px 24px;
-  background-color: #ffffff;
+  background-color: #FB6CA5;
   color: #333333;
-  border: 1px solid #cccccc;
   font-size: 0.8rem;
   font-family: var(--font-body);
   font-weight: 700;
