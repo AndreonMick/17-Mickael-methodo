@@ -51,6 +51,18 @@ a {
   font-family: "bodoni";
   src: url("webfonts/Bodoni_Moda/BodoniModa-VariableFont_opsz,wght.ttf") format("truetype-variations");
 }
+@font-face {
+  font-family: "Roboto_Serif";
+  src: url("webfonts/Roboto_Serif/RobotoSerif-VariableFont_GRAD,opsz,wdth,wght.ttf") format("truetype-variations");
+}
+@font-face {
+  font-family: "Rubik_Glitch";
+  src: url("webfonts/Rubik_Glitch/RubikGlitch-Regular.ttf") format("truetype-variations");
+}
+@font-face {
+  font-family: "Madimi-One";
+  src: url("webfonts/Madimi_One/MadimiOne-Regular.ttf");
+}
 :root {
   --color-bg-dark: #0B243B; /* Fond noir principal */
   --color-bg-section: #0b2e4e; /* Fond légèrement plus clair */
@@ -65,7 +77,7 @@ a {
   --color-border: #4719C8; /* Bordure séparatrice */
   --color-leaderboard-link: #4719C8; /* Bleu des liens du leaderboard */
   --color-score: #4719C8; /* Bleu du score 20/20 */
-  --font-title: 'Oswald', sans-serif; /* Police des grands titres */
+  --font-title: 'Madimi_One', sans-serif; /* Police des grands titres */
   --font-body: 'Lato', sans-serif; /* Police du texte courant */
 }
 
@@ -190,7 +202,6 @@ body {
 /* Le grand titre principal */
 .hero__title {
   font-family: var(--font-title);
-  font-family: "bodoni";
   font-size: 3.5rem;
   font-weight: 700;
   text-transform: uppercase;

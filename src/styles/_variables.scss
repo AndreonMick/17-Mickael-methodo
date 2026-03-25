@@ -1,7 +1,4 @@
-// Colors
-$color-primary: #F00;
-$color-secondary: #666;
-$color-bg: #fff;
+
 :root {
   --color-bg-dark:      #0B243B;   /* Fond noir principal */
   --color-bg-section:   #0b2e4e;   /* Fond légèrement plus clair */
@@ -17,9 +14,13 @@ $color-bg: #fff;
   --color-leaderboard-link: #4719C8; /* Bleu des liens du leaderboard */
   --color-score:        #4719C8;   /* Bleu du score 20/20 */
 
-  --font-title:         'Oswald', sans-serif;   /* Police des grands titres */
+  --font-title:         'Madimi_One', sans-serif;   /* Police des grands titres */
   --font-body:          'Lato', sans-serif;      /* Police du texte courant */
 }
+
+
+
+
 
 // Typography
 $font-main: 'helvetica', Arial, sans-serif;
@@ -27,3 +28,7 @@ $txt-commun: 'Manrope', Arial, sans-serif;
 
 // Spacing
 $spacing: 1rem;
+
+$color-primary: #F00;
+$color-secondary: #666;
+$color-bg: #fff;
