@@ -57,11 +57,15 @@ a {
 }
 @font-face {
   font-family: "Rubik_Glitch";
-  src: url("webfonts/Rubik_Glitch/RubikGlitch-Regular.ttf") format("truetype-variations");
+  src: url("webfonts/Rubik_Glitch/RubikGlitch-Regular.ttf");
 }
 @font-face {
   font-family: "Madimi-One";
   src: url("webfonts/Madimi_One/MadimiOne-Regular.ttf");
+}
+@font-face {
+  font-family: "DM_Sans";
+  src: url(webfonts/DM_Sans/DMSans-VariableFont_opsz,wght.ttf) format("truetype-variations");
 }
 :root {
   --color-bg-dark: #0B243B; /* Fond noir principal */
@@ -77,8 +81,8 @@ a {
   --color-border: #4719C8; /* Bordure séparatrice */
   --color-leaderboard-link: #4719C8; /* Bleu des liens du leaderboard */
   --color-score: #4719C8; /* Bleu du score 20/20 */
-  --font-title: 'Madimi_One', sans-serif; /* Police des grands titres */
-  --font-body: 'Lato', sans-serif; /* Police du texte courant */
+  --font-title: 'Madimi-One'; /* Police des grands titres */
+  --font-body: 'DM_Sans'; /* Police du texte courant */
 }
 
 body {
