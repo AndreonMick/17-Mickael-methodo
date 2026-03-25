@@ -228,9 +228,10 @@ body {
 
 /* Le sous-titre descriptif */
 .hero__subtitle {
-  font-size: 1.1rem;
+  font-size: 1.4rem;
   color: var(--color-text-muted);
   max-width: 500px;
+  text-align: center;
   margin: 0 auto 40px;
   line-height: 1.6;
 }
@@ -327,7 +328,7 @@ body {
 /* La description sous le titre */
 .feature-card__desc {
   font-size: 0.85rem;
-  color: #555555;
+  color: #111111;
   line-height: 1.5;
 }
 
