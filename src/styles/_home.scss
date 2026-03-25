@@ -1,0 +1,486 @@
+@use 'variables';
+@use 'mixins';
+
+//body {
+ // font-family: variables.$font-main;
+ // color: variables.$color-primary;
+  //background: variables.$color-bg;
+//}
+
+//.container {
+ // width: 90%;
+ // max-width: 1200px;
+ // background: variables.$color-primary;
+ // margin: 0 auto;
+ // font-family: variables.$txt-commun;
+ //@include mixins.bp('desktop') {
+  //  background: yellow;
+  //}
+  //@media (min-width: 400px) {
+  //  background: lime;
+ // }
+//}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-bg-dark);
+  color: var(--color-text-light);
+}
+
+
+/* ============================================================
+   BLOC : NAVBAR
+   La barre de navigation en haut de la page
+============================================================ */
+
+/* Conteneur principal de la navbar */
+.navbar {
+  display: flex;                   /* Disposition en ligne */
+  align-items: center;             /* Centré verticalement */
+  justify-content: space-between;  /* Logo à gauche, langue à droite */
+  padding: 0 40px;
+  height: 60px;
+  background-color: var(--color-bg-dark);
+  border-bottom: 1px solid var(--color-border);
+}
+
+/* Partie gauche : logo + liens de navigation */
+.navbar__left {
+  display: flex;
+  align-items: center;
+  gap: 32px; /* Espace entre le logo et les liens */
+}
+
+/* Le logo (icône + texte) */
+.navbar__brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  color: var(--color-text-light);
+  font-family: var(--font-title);
+  font-size: 1.2rem;
+}
+
+/* L'icône couronne du logo (unicode) */
+.navbar__brand-icon {
+  font-size: 1.4rem;
+  color: var(--color-accent-purple);
+}
+
+/* La liste des liens de navigation */
+.navbar__nav {
+  display: flex;
+  list-style: none; /* Supprime les puces */
+  gap: 4px;
+}
+
+/* Chaque lien de navigation */
+.navbar__link {
+  text-decoration: none;
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+  padding: 6px 14px;
+  border-radius: 4px;
+}
+
+/* Le lien actif (page courante) a un fond blanc et texte noir */
+.navbar__link--active {
+  background-color: var(--color-nav-active);
+  color: var(--color-text-dark);
+  font-weight: 700;
+}
+
+/* Partie droite : sélecteur de langue */
+.navbar__lang {
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--color-text-muted);
+  border-radius: 3rem;
+  overflow: hidden; /* Arrondit les coins intérieurs */
+}
+
+/* Chaque bouton de langue */
+.navbar__lang-btn {
+  padding: 5px 12px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  background: none;
+  border: none;
+  color: var(--color-text-muted);
+  cursor: pointer;
+  font-family: var(--font-body);
+}
+
+/* La langue active est mise en valeur avec un fond jaune */
+.navbar__lang-btn--active {
+  background-color: var(--color-accent-gold);
+  color: var(--color-text-dark);
+}
+
+
+/* ============================================================
+   SECTION : HERO
+   La grande bannière en haut avec le titre et les boutons
+============================================================ */
+
+.hero {
+  height:25rem;
+  width: 100%;
+  position:relative;
+  z-index: 1;
+  overflow:hidden;
+}
+.header{
+  position:relative;
+}
+
+.header__pattern{
+  background-image: url("../images/Frame 1.png");
+  background-size: 100%;
+  background-size: auto 15rem;
+  padding-block-start:5rem;
+}
+//.hero__pattern{
+  //position:absolute;
+  //inset:0;
+  //background-image: url("../images/Frame 1.png");
+  //background-size: 100%;
+  //background-size: auto 15rem;
+  //z-index: 0;
+  //margin-block-start:1rem;
+
+/* Le grand titre principal */
+.hero__title {
+  font-family: var(--font-title);
+  //font-family: 'madimi-One';
+  font-size: 3.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--color-text-light);
+  line-height: 1.1;
+  display:flex;
+justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-block-end: 2rem;
+  padding-block-start: 5rem;
+  z-index: 1;
+  
+
+
+  /* Effet de contour sur les lettres */
+  -webkit-text-stroke: 1px rgba(255,255,255,0.3);
+}
+
+/* Le mot "KING" est mis en couleur or */
+.hero__title-accent {
+  color: var(--color-accent-gold);
+  -webkit-text-stroke: 0; /* Supprime le contour sur ce mot */
+  padding:1rem;
+}
+
+/* Le sous-titre descriptif */
+.hero__subtitle {
+  font-size: 1.1rem;
+  color: var(--color-text-muted);
+  max-width: 500px;
+  margin: 0 auto 40px;
+  line-height: 1.6;
+}
+
+/* Groupe des deux boutons d'action */
+.hero__actions {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+/* Style commun à tous les boutons */
+.btn {
+  padding: 14px 32px;
+  font-family: var(--font-title);
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Bouton jaune/plein (primaire) */
+.btn--primary {
+  background-color: var(--color-accent-gold);
+  color: var(--color-text-dark);
+  border-radius: 3rem;
+}
+
+/* Bouton contour blanc (secondaire) */
+.btn--outline {
+  background-color: transparent;
+  color: var(--color-text-light);
+  border: 2px solid var(--color-text-light);
+  border-radius: 3rem;
+}
+
+
+/* ============================================================
+   SECTION : FEATURES (les 3 cartes)
+   Affiche 3 blocs côte à côte sur desktop
+============================================================ */
+
+.features {
+  background-color: var(--color-bg-dark);
+  padding: 0 40px 60px;
+}
+
+/* La grille des 3 cartes, en 3 colonnes égales */
+.features__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 colonnes de même largeur */
+  gap: 2px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Une carte individuelle */
+.feature-card {
+  background-color: var(--color-bg-card);
+  padding: 40px 30px;
+  text-align: center;
+  display: flex;
+  flex-direction: column; /* Contenu empilé verticalement */
+  align-items: center;
+  gap: 14px;
+}
+
+/* Le cercle violet avec la lettre (A, B, C) */
+.feature-card__icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%; /* Cercle parfait */
+  background-color: var(--color-accent-purple);
+  color: var(--color-text-light);
+  font-family: var(--font-title);
+  font-size: 1.4rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Le titre de la carte (ICONIC QUOTES, etc.) */
+.feature-card__title {
+  font-family: var(--font-title);
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--color-text-dark);
+}
+
+/* La description sous le titre */
+.feature-card__desc {
+  font-size: 0.85rem;
+  color: #555555;
+  line-height: 1.5;
+}
+
+
+/* ============================================================
+   SECTION : BOTTOM
+   2 colonnes : leaderboard à gauche | citation à droite
+============================================================ */
+
+.bottom {
+  background-color: #75A0C8; /* Fond légèrement crème */
+  padding: 60px 100px;
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* 2 colonnes égales */
+  gap: 60px;
+  align-items: start;
+}
+
+/* -------- Leaderboard (colonne gauche) -------- */
+
+/* Titre "Top Players This Week" */
+.leaderboard__title {
+  font-family: var(--font-body);
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--color-leaderboard-link);
+  margin-bottom: 24px;
+}
+
+/* La liste des joueurs */
+.leaderboard__list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Une ligne de joueur */
+.leaderboard__item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #333333;
+  font-size: 0.9rem;
+}
+
+/* Le numéro (1. 2. 3.) */
+.leaderboard__rank {
+  min-width: 20px;
+  color: #4719C8;
+}
+
+/* Le nom du joueur + score */
+.leaderboard__player {
+  flex: 1; /* Prend tout l'espace disponible */
+}
+
+/* Le score en bleu (20/20) */
+.leaderboard__score {
+  color: var(--color-score);
+  font-weight: 700;
+}
+
+/* La date à droite */
+.leaderboard__date {
+  color: #4719C8;
+  font-size: 0.8rem;
+}
+
+/* -------- Quote (colonne droite) -------- */
+
+/* La séparation verticale entre les deux colonnes */
+.quote-block {
+  border-left: 1px solid #FB6CA5;
+  padding-left: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+}
+
+/* La citation de film */
+.quote-block__text {
+  font-size: 1.3rem;
+  font-style: italic;
+  color: #0B243B;
+  line-height: 1.6;
+}
+
+/* Les guillemets décoratifs autour de la citation */
+.quote-block__text::before {
+  content: '\201C '; /* Guillemet ouvrant */
+  color: var(--color-accent-gold);
+  font-size: 1.8rem;
+  font-style: normal;
+}
+.quote-block__text::after {
+  content: ' \201D'; /* Guillemet fermant */
+  color: var(--color-accent-gold);
+  font-size: 1.8rem;
+  font-style: normal;
+}
+
+/* La ligne "— Guess the movie!" */
+.quote-block__cta {
+  color: #4719C8;
+  font-size: 1rem;
+}
+
+/* Le bouton "REVEAL ANSWER" */
+.quote-block__btn {
+  padding: 10px 24px;
+  background-color: #FB6CA5;
+  color: #333333;
+  border: none;
+  font-size: 0.8rem;
+  font-family: var(--font-body);
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border-radius: 3rem;
+  cursor: pointer;
+}
+
+
+/* ============================================================
+   BANDE DORÉE
+   La fine bande jaune entre la section bottom et le footer
+============================================================ */
+
+.gold-bar {
+  height: 8px;
+  background-color: var(--color-accent-gold);
+}
+
+
+/* ============================================================
+   SECTION : FOOTER
+   Le pied de page sombre avec les liens
+============================================================ */
+
+.footer {
+  background-color: var(--color-bg-footer);
+  padding: 50px 100px;
+  display: grid;
+  /* 3 colonnes : large à gauche, deux petites à droite */
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 60px;
+}
+
+/* Le nom "Movie Kings" en jaune */
+.footer__brand-name {
+  color: var(--color-accent-gold);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+/* Le texte de description sous le logo */
+.footer__brand-desc {
+  color: var(--color-text-muted);
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+/* Titre de colonne dans le footer (Navigation, Resources) */
+.footer__col-title {
+  color: var(--color-text-muted);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 14px;
+}
+
+/* La liste de liens */
+.footer__links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Chaque lien du footer */
+.footer__link {
+  text-decoration: none;
+  color: var(--color-text-muted);
+  font-size: 0.85rem;
+}
+
+/* Effet au survol : le lien devient blanc */
+.footer__link:hover {
+  color: var(--color-text-light);
+}
+
+
+
+
