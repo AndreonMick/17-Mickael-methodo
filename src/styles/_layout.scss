@@ -125,25 +125,14 @@ body {
 ============================================================ */
 
 .hero {
-  /* Motif zigzag en arrière-plan avec des dégradés croisés */
-  background-color: var(--color-bg-dark);
-  background-image:
-    repeating-linear-gradient(
-      135deg,
-      transparent,
-      transparent 18px,
-      rgba(255,255,255,0.04) 18px,
-      rgba(255,255,255,0.04) 20px
-    ),
-    repeating-linear-gradient(
-      45deg,
-      transparent,
-      transparent 18px,
-      rgba(255,255,255,0.04) 18px,
-      rgba(255,255,255,0.04) 20px
-    );
-  padding: 80px 40px;
-  text-align: center;
+  height:30rem;
+  width: 100%;
+  background-image: url("../images/Frame 1.png");
+  //background-repeat: repeat;
+  background-size: 100%;
+  background-size: contain;
+  
+
 }
 
 /* Le grand titre principal */
@@ -155,7 +144,14 @@ body {
   letter-spacing: 2px;
   color: var(--color-text-light);
   line-height: 1.1;
-  margin-bottom: 24px;
+  display:flex;
+  width:auto;
+  align-items: center;
+  margin-block-end: 2rem;
+  padding-block-start: 5rem;
+  padding-inline-start: 5rem;
+  
+
 
   /* Effet de contour sur les lettres */
   -webkit-text-stroke: 1px rgba(255,255,255,0.3);
