@@ -37,7 +37,7 @@ a {
 
 @font-face {
   font-family: "MyFont";
-  src: url("../webfonts/myfont.woff2") format("woff2");
+  src: url("webfonts/myfont.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
 }
@@ -46,6 +46,10 @@ a {
   src: url("webfonts/Manrope/Manrope-VariableFont_wght.ttf") format("truetype-variations");
   font-weight: 200 800;
   font-style: normal;
+}
+@font-face {
+  font-family: "bodoni";
+  src: url("webfonts/Bodoni_Moda/BodoniModa-VariableFont_opsz,wght.ttf") format("truetype-variations");
 }
 :root {
   --color-bg-dark: #0B243B; /* Fond noir principal */
@@ -167,14 +171,26 @@ body {
 .hero {
   height: 25rem;
   width: 100%;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.header {
+  position: relative;
+}
+
+.header__pattern {
   background-image: url("../images/Frame 1.png");
   background-size: 100%;
   background-size: auto 15rem;
+  padding-block-start: 5rem;
 }
 
 /* Le grand titre principal */
 .hero__title {
   font-family: var(--font-title);
+  font-family: "bodoni";
   font-size: 3.5rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -187,6 +203,7 @@ body {
   text-align: center;
   margin-block-end: 2rem;
   padding-block-start: 5rem;
+  z-index: 1;
   /* Effet de contour sur les lettres */
   -webkit-text-stroke: 1px rgba(255, 255, 255, 0.3);
 }
@@ -410,6 +427,7 @@ body {
   padding: 10px 24px;
   background-color: #FB6CA5;
   color: #333333;
+  border: none;
   font-size: 0.8rem;
   font-family: var(--font-body);
   font-weight: 700;

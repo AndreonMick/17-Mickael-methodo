@@ -7,18 +7,18 @@ Manrope is a variable font with this axis:
   wght
 
 This means all the styles are contained in a single file:
-  Manrope-VariableFont_wght.ttf
+  Manrope/Manrope-VariableFont_wght.ttf
 
 If your app fully supports variable fonts, you can now pick intermediate styles
 that aren’t available as static fonts. Not all apps support variable fonts, and
 in those cases you can use the static font files for Manrope:
-  static/Manrope-ExtraLight.ttf
-  static/Manrope-Light.ttf
-  static/Manrope-Regular.ttf
-  static/Manrope-Medium.ttf
-  static/Manrope-SemiBold.ttf
-  static/Manrope-Bold.ttf
-  static/Manrope-ExtraBold.ttf
+  Manrope/static/Manrope-ExtraLight.ttf
+  Manrope/static/Manrope-Light.ttf
+  Manrope/static/Manrope-Regular.ttf
+  Manrope/static/Manrope-Medium.ttf
+  Manrope/static/Manrope-SemiBold.ttf
+  Manrope/static/Manrope-Bold.ttf
+  Manrope/static/Manrope-ExtraBold.ttf
 
 Get started
 -----------
