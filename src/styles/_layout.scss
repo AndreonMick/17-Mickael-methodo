@@ -96,7 +96,7 @@ body {
   display: flex;
   align-items: center;
   border: 1px solid var(--color-text-muted);
-  border-radius: 4px;
+  border-radius: 3rem;
   overflow: hidden; /* Arrondit les coins intérieurs */
 }
 
@@ -214,6 +214,7 @@ justify-content: center;
 .btn--primary {
   background-color: var(--color-accent-gold);
   color: var(--color-text-dark);
+  border-radius: 3rem;
 }
 
 /* Bouton contour blanc (secondaire) */
@@ -221,6 +222,7 @@ justify-content: center;
   background-color: transparent;
   color: var(--color-text-light);
   border: 2px solid var(--color-text-light);
+  border-radius: 3rem;
 }
 
 
@@ -404,6 +406,7 @@ justify-content: center;
   font-weight: 700;
   letter-spacing: 1px;
   text-transform: uppercase;
+  border-radius: 3rem;
   cursor: pointer;
 }
 
