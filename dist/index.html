@@ -3,12 +3,215 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Movie Kings</title>
   <link rel="stylesheet" href="styles/main.min.css">
 </head>
 <body>
-  <div class="container">
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, voluptate molestias? Ex neque libero molestias magni culpa dicta voluptate perspiciatis tempora nam cum officiis, assumenda sed sunt eius aliquid tempore!
-  </div>
+
+  <!-- ============================================================
+       NAVBAR
+       Contient : logo | liens de navigation | sélecteur de langue
+  ============================================================ -->
+  <header class="navbar">
+
+    <!-- Gauche : logo + liens -->
+    <div class="navbar__left">
+
+      <!-- Logo cliquable -->
+      <a href="#" class="navbar__brand">
+        <span class="navbar__brand-icon">♛</span>
+        Movie Kings
+      </a>
+
+      <!-- Liens de navigation -->
+      <nav>
+        <ul class="navbar__nav">
+          <!-- Le lien "Home" est actif (fond blanc) -->
+          <li><a href="#" class="navbar__link navbar__link--active">Home</a></li>
+          <li><a href="#" class="navbar__link">Quiz</a></li>
+          <li><a href="#" class="navbar__link">Results</a></li>
+        </ul>
+      </nav>
+
+    </div>
+
+    <!-- Droite : sélecteur de langue -->
+    <div class="navbar__lang">
+      <!-- EN est actif (fond jaune) -->
+      <button class="navbar__lang-btn navbar__lang-btn--active">EN</button>
+      <button class="navbar__lang-btn">FR</button>
+    </div>
+
+  </header>
+
+
+  <!-- ============================================================
+       SECTION HERO
+       Grande bannière avec titre, sous-titre et boutons d'action
+  ============================================================ -->
+  <section class="hero">
+
+    <!-- Grand titre avec le mot "KING" en jaune -->
+    <h1 class="hero__title">
+      Quote <span class="hero__title-accent">King</span> or Movie Fan ?
+    </h1>
+
+    <!-- Texte descriptif -->
+    <p class="hero__subtitle">
+      Test your cinema knowledge by matching iconic movie quotes to their films.
+    </p>
+
+    <!-- Les deux boutons -->
+    <div class="hero__actions">
+      <a href="#" class="btn btn--primary">Start Quiz</a>
+      <a href="#" class="btn btn--outline">Browse by Category</a>
+    </div>
+
+  </section>
+
+
+  <!-- ============================================================
+       SECTION FEATURES
+       3 cartes affichées côte à côte
+  ============================================================ -->
+  <section class="features">
+
+    <div class="features__grid">
+
+      <!-- Carte A : Iconic Quotes -->
+      <div class="feature-card">
+        <div class="feature-card__icon">A</div>
+        <h3 class="feature-card__title">Iconic Quotes</h3>
+        <p class="feature-card__desc">
+          Test your knowledge of cinema's most memorable lines.
+        </p>
+      </div>
+
+      <!-- Carte B : Track Progress -->
+      <div class="feature-card">
+        <div class="feature-card__icon">B</div>
+        <h3 class="feature-card__title">Track Progress</h3>
+        <p class="feature-card__desc">
+          Watch your score climb as you correctly identify quotes.
+        </p>
+      </div>
+
+      <!-- Carte C : Get Feedback -->
+      <div class="feature-card">
+        <div class="feature-card__icon">C</div>
+        <h3 class="feature-card__title">Get Feedback</h3>
+        <p class="feature-card__desc">
+          Receive personalized feedback based on your performance.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       SECTION BOTTOM
+       2 colonnes : classement des joueurs | citation mystère
+  ============================================================ -->
+  <section class="bottom">
+
+    <!-- Colonne gauche : Leaderboard -->
+    <div class="leaderboard">
+
+      <h2 class="leaderboard__title">Top Players This Week</h2>
+
+      <ul class="leaderboard__list">
+
+        <!-- Joueur 1 -->
+        <li class="leaderboard__item">
+          <span class="leaderboard__rank">1.</span>
+          <span class="leaderboard__player">
+            SQUEEZI —
+            <span class="leaderboard__score">20/20</span>
+          </span>
+          <span class="leaderboard__date">MAR 22 [ 20:21 ]</span>
+        </li>
+
+        <!-- Joueur 2 -->
+        <li class="leaderboard__item">
+          <span class="leaderboard__rank">2.</span>
+          <span class="leaderboard__player">
+            PERCEPTOR —
+            <span class="leaderboard__score">20/20</span>
+          </span>
+          <span class="leaderboard__date">MAR 21 [ 19:22 ]</span>
+        </li>
+
+        <!-- Joueur 3 -->
+        <li class="leaderboard__item">
+          <span class="leaderboard__rank">3.</span>
+          <span class="leaderboard__player">
+            JORDAN KDI... —
+            <span class="leaderboard__score">20/20</span>
+          </span>
+          <span class="leaderboard__date">MAR 21 [ 15:55 ]</span>
+        </li>
+
+      </ul>
+    </div>
+
+    <!-- Colonne droite : Citation à deviner -->
+    <div class="quote-block">
+
+      <!-- La citation du film -->
+      <p class="quote-block__text">May the Force be with you.</p>
+
+      <!-- Invitation à deviner -->
+      <p class="quote-block__cta">— Guess the movie!</p>
+
+      <!-- Bouton pour révéler la réponse -->
+      <button class="quote-block__btn">Reveal Answer</button>
+
+    </div>
+
+  </section>
+
+
+  <!-- ============================================================
+       BANDE DORÉE (décoration entre bottom et footer)
+  ============================================================ -->
+  <div class="gold-bar"></div>
+
+
+  <!-- ============================================================
+       FOOTER
+       3 colonnes : description du site | navigation | ressources
+  ============================================================ -->
+  <footer class="footer">
+
+    <!-- Colonne 1 : Marque + description -->
+    <div class="footer__brand">
+      <p class="footer__brand-name">Movie Kings</p>
+      <p class="footer__brand-desc">Ultimate Movie Quiz to challenge your friends.</p>
+    </div>
+
+    <!-- Colonne 2 : Navigation -->
+    <div class="footer__col">
+      <p class="footer__col-title">Navigation</p>
+      <ul class="footer__links">
+        <li><a href="#" class="footer__link">Home</a></li>
+        <li><a href="#" class="footer__link">Start Quiz</a></li>
+        <li><a href="#" class="footer__link">Results</a></li>
+        <li><a href="#" class="footer__link">About</a></li>
+      </ul>
+    </div>
+
+    <!-- Colonne 3 : Ressources externes -->
+    <div class="footer__col">
+      <p class="footer__col-title">Resources</p>
+      <ul class="footer__links">
+        <li><a href="#" class="footer__link">IMDb</a></li>
+        <li><a href="#" class="footer__link">Sight &amp; Sound</a></li>
+        <li><a href="#" class="footer__link">Rotten Tomatoes</a></li>
+      </ul>
+    </div>
+
+  </footer>
+
 </body>
 </html>
