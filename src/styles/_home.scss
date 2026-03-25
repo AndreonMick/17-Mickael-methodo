@@ -1,33 +1,11 @@
 @use 'variables';
 @use 'mixins';
 
-//body {
- // font-family: variables.$font-main;
- // color: variables.$color-primary;
-  //background: variables.$color-bg;
-//}
-
-//.container {
- // width: 90%;
- // max-width: 1200px;
- // background: variables.$color-primary;
- // margin: 0 auto;
- // font-family: variables.$txt-commun;
- //@include mixins.bp('desktop') {
-  //  background: yellow;
-  //}
-  //@media (min-width: 400px) {
-  //  background: lime;
- // }
-//}
-
 body {
   font-family: var(--font-body);
   background-color: var(--color-bg-dark);
   color: var(--color-text-light);
 }
-
-
 /* ============================================================
    BLOC : NAVBAR
    La barre de navigation en haut de la page
@@ -55,17 +33,14 @@ body {
 .navbar__brand {
   display: flex;
   align-items: center;
-  gap: 8px;
-  text-decoration: none;
-  color: var(--color-text-light);
-  font-family: var(--font-title);
-  font-size: 1.2rem;
-}
+  gap: 0.5rem;
 
-/* L'icône couronne du logo (unicode) */
-.navbar__brand-icon {
-  font-size: 1.4rem;
-  color: var(--color-accent-purple);
+  img {
+    width: 40px;
+    height: 40px;
+    display: block;
+    flex-shrink: 0;
+  }
 }
 
 /* La liste des liens de navigation */
@@ -240,7 +215,7 @@ justify-content: center;
 .features__grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* 3 colonnes de même largeur */
-  gap: 2px;
+  gap: 2rem;
   max-width: 800px;
   margin: 0 auto;
 }
