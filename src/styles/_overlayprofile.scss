@@ -229,9 +229,8 @@
   transition: background-color 0.2s, transform 0.15s;
 
   &:hover {
-    background-color: var(--color-accent-purple);
+    background-color: var(--color-button-hover);
     transform: translateY(-1px);
-    color:white;
   }
 
   &:active {
