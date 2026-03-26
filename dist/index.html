@@ -276,7 +276,66 @@
     </div>
 
     <!-- Bouton START QUIZ -->
-    <button class="overlay__submit" type="button">Start Quiz</button>
+    <a href="#overlay-category" class="overlay__submit">Start Quiz</a>
+
+  </div>
+
+</div>
+
+<div class="overlay" id="overlay-category" role="dialog" aria-modal="true" aria-labelledby="overlay-category-title">
+
+  <p class="overlay__page-title">Choose your<br>Challenge</p>
+
+  <a href="#" class="overlay__close" aria-label="Fermer">&#x2715;</a>
+
+  <div class="overlay__card overlay__card--category">
+
+    <h2 class="overlay__heading overlay__heading--gold" ...>Select Category</h2>
+    <p class="overlay__sub">Choose a movie category to focus your quiz, or select "All Categories" for a mixed experience.</p>
+
+    <div class="category-list" role="radiogroup">
+
+      <label class="category-option category-option--active">
+        <input type="radio" name="category" value="all" checked aria-label="All Categories">
+        <span class="category-option__label">All Categories</span>
+      </label>
+
+      <label class="category-option">
+        <input type="radio" name="category" value="action" aria-label="Action">
+        <span class="category-option__label">Action</span>
+      </label>
+
+      <label class="category-option">
+        <input type="radio" name="category" value="drama" aria-label="Drama">
+        <span class="category-option__label">Drama</span>
+      </label>
+
+      <label class="category-option">
+        <input type="radio" name="category" value="thriller" aria-label="Thriller">
+        <span class="category-option__label">Thriller</span>
+      </label>
+
+      <label class="category-option">
+        <input type="radio" name="category" value="romance" aria-label="Romance">
+        <span class="category-option__label">Romance</span>
+      </label>
+
+      <label class="category-option">
+        <input type="radio" name="category" value="scifi" aria-label="Sci-Fi">
+        <span class="category-option__label">Sci-Fi</span>
+      </label>
+
+      <label class="category-option">
+        <input type="radio" name="category" value="fantasy" aria-label="Fantasy">
+        <span class="category-option__label">Fantasy</span>
+      </label>
+
+    </div>
+
+    <div class="overlay__actions">
+      <a href="#" class="overlay__btn-cancel">Cancel</a>
+      <button class="overlay__btn-start" type="button">Start Quiz</button>
+    </div>
 
   </div>
 
