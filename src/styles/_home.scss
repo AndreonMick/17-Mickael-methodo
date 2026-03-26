@@ -108,13 +108,19 @@ body {
 }
 .header{
   position:relative;
+  height:auto;
 }
 
-.header__pattern{
-  background-image: url("../images/Frame 1.png");
-  background-size: 100%;
-  background-size: auto 15rem;
-  padding-block-start:5rem;
+.header__pattern {
+  position: absolute;
+  top: 3rem;
+  bottom: 5rem;
+  width: 100%;
+  height: 30rem;
+  background-image: url("../images/newpattern.svg");
+  background-size: auto auto;
+  background-repeat: repeat;
+  z-index: 0;
 }
 
 /* Le grand titre principal */
@@ -197,8 +203,10 @@ justify-content: center;
 ============================================================ */
 
 .features {
-  background-color: var(--color-bg-dark);
+  background-color: transparent;
   padding: 0 40px 60px;
+  position: relative;
+  z-index: 1; 
 }
 
 /* La grille des 3 cartes, en 3 colonnes égales */
