@@ -1,0 +1,258 @@
+/* ============================================================
+   OVERLAY QUIZ
+   À coller dans un nouveau fichier _overlay.scss
+   et à importer dans main.scss avec : @use 'overlay';
+============================================================ */
+
+/* Backdrop – fond sombre derrière la modale */
+.overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 9000;
+  padding: 1rem;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+/* Affiché quand l'URL cible #overlay-quiz */
+.overlay:target {
+  display: flex;
+  animation: overlayFadeIn 0.25s ease forwards;
+}
+
+@keyframes overlayFadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* Bouton de fermeture × */
+.overlay__close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-muted);
+  font-size: 1.4rem;
+  text-decoration: none;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  transition: color 0.2s, border-color 0.2s;
+  line-height: 1;
+
+  &:hover {
+    color: var(--color-text-light);
+    border-color: var(--color-text-light);
+  }
+}
+
+/* Carte principale */
+.overlay__card {
+  position: relative;
+  background-color: #323232;
+  border: 1px solid #3e3e3e;
+  border-radius: 4px;
+  width: min(520px, 100%);
+  padding: 2.5rem 2.5rem 2rem;
+  animation: cardSlideIn 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+@keyframes cardSlideIn {
+  from { opacity: 0; transform: translateY(24px) scale(0.97); }
+  to   { opacity: 1; transform: translateY(0)     scale(1);   }
+}
+
+/* Titre */
+.overlay__heading {
+  font-family: var(--font-title);
+  font-size: 1.3rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--color-text-light);
+  margin-bottom: 0.4rem;
+}
+
+/* Sous-titre */
+.overlay__sub {
+  font-size: 0.82rem;
+  color: var(--color-text-muted);
+  margin-bottom: 2rem;
+}
+
+/* Grille des 3 personnages */
+.overlay__characters {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+/* Label qui wrappe chaque personnage */
+.char-option {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+
+  /* Cache le vrai radio natif */
+  input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+}
+
+/* Carte autour de l'image */
+.char-option__card {
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: 4px;
+  border: 2px solid transparent;
+  background-color: rgba(255, 255, 255, 0.04);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 0.75rem;
+  transition: border-color 0.2s, background-color 0.2s, transform 0.2s;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+}
+
+.char-option:hover .char-option__card {
+  background-color: rgba(255, 255, 255, 0.07);
+  transform: translateY(-3px);
+}
+
+/* Carte sélectionnée → bordure dorée */
+.char-option input[type="radio"]:checked ~ .char-option__card {
+  border-color: var(--color-accent-gold);
+  background-color: rgba(240, 180, 41, 0.08);
+  box-shadow: 0 0 0 3px rgba(240, 180, 41, 0.15);
+}
+
+/* Radio visuel custom sous la carte */
+.char-option__radio {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 2px solid var(--color-text-muted);
+  background: transparent;
+  transition: border-color 0.2s, background-color 0.2s;
+  flex-shrink: 0;
+}
+
+.char-option input[type="radio"]:checked ~ .char-option__radio {
+  border-color: var(--color-accent-gold);
+  background-color: var(--color-accent-gold);
+  box-shadow: 0 0 0 3px rgba(240, 180, 41, 0.25);
+}
+
+/* Nom sous le radio */
+.char-option__name {
+  font-family: var(--font-title);
+  font-size: 0.75rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  text-align: center;
+  transition: color 0.2s;
+}
+
+.char-option input[type="radio"]:checked ~ .char-option__name {
+  color: var(--color-accent-gold);
+}
+
+/* Champ Nickname */
+.overlay__field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin-bottom: 1.75rem;
+}
+
+.overlay__label {
+  font-family: var(--font-title);
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+}
+
+.overlay__input {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.35);
+  padding: 0.5rem 0;
+  color: var(--color-text-light);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  outline: none;
+  width: 100%;
+  transition: border-color 0.2s;
+
+  &::placeholder {
+    color: rgba(255, 255, 255, 0.2);
+  }
+
+  &:focus {
+    border-bottom-color: var(--color-accent-gold);
+  }
+}
+
+/* Bouton START QUIZ */
+.overlay__submit {
+  display: block;
+  width: 100%;
+  padding: 14px;
+  font-family: var(--font-title);
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-align: center;
+  background-color: var(--color-accent-gold);
+  color: var(--color-text-dark);
+  border: none;
+  border-radius: 3rem;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.15s;
+
+  &:hover {
+    background-color: #e0a820;
+    transform: translateY(-1px);
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+}
+
+/* Responsive mobile */
+@media (max-width: 400px) {
+  .overlay__card {
+    padding: 2rem 1.25rem 1.5rem;
+  }
+
+  .overlay__characters {
+    gap: 0.5rem;
+  }
+
+  .char-option__card {
+    padding: 0.5rem;
+  }
+}

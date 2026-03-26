@@ -28,7 +28,7 @@
         <ul class="navbar__nav">
           <!-- Le lien "Home" est actif (fond blanc) -->
           <li><a href="index.html" class="navbar__link navbar__link--active">Home</a></li>
-          <li><a href="#" class="navbar__link">Quiz</a></li>
+          <li><a href="#overlay-quiz" class="navbar__link">Quiz</a></li>
           <li><a href="#" class="navbar__link">Results</a></li>
         </ul>
       </nav>
@@ -215,6 +215,71 @@
     </div>
 
   </footer>
+<div class="overlay" id="overlay-quiz" role="dialog" aria-modal="true" aria-labelledby="overlay-title">
 
+  <!-- Bouton fermer -->
+  <a href="#" class="overlay__close" aria-label="Fermer">&#x2715;</a>
+
+  <div class="overlay__card">
+
+    <!-- En-tête -->
+    <h2 class="overlay__heading" id="overlay-title">Who are you ?</h2>
+    <p class="overlay__sub">Are you a king, a queen or&hellip;</p>
+
+    <!-- Sélection du personnage -->
+    <div class="overlay__characters" role="radiogroup">
+
+      <!-- Personnage 1 -->
+      <label class="char-option">
+        <input type="radio" name="character" value="king" aria-label="King Quotes">
+        <div class="char-option__card">
+          <img src="TON-IMAGE-KING.png" alt="King Quotes">
+        </div>
+        <span class="char-option__radio"></span>
+        <span class="char-option__name">King</span>
+      </label>
+
+      <!-- Personnage 2 -->
+      <label class="char-option">
+        <input type="radio" name="character" value="nobinari" checked aria-label="No Binari">
+        <div class="char-option__card">
+          <img src="TON-IMAGE-NOBINARI.png" alt="No Binari">
+        </div>
+        <span class="char-option__radio"></span>
+        <span class="char-option__name">No Binari</span>
+      </label>
+
+      <!-- Personnage 3 -->
+      <label class="char-option">
+        <input type="radio" name="character" value="queen" aria-label="Quiz Queen">
+        <div class="char-option__card">
+          <img src="TON-IMAGE-QUEEN.png" alt="Quiz Queen">
+        </div>
+        <span class="char-option__radio"></span>
+        <span class="char-option__name">Queen</span>
+      </label>
+
+    </div>
+
+    <!-- Champ Nickname -->
+    <div class="overlay__field">
+      <label class="overlay__label" for="nickname">Nickname</label>
+      <input
+        class="overlay__input"
+        type="text"
+        id="nickname"
+        name="nickname"
+        placeholder="Enter your nickname…"
+        maxlength="20"
+        autocomplete="off"
+      >
+    </div>
+
+    <!-- Bouton START QUIZ -->
+    <button class="overlay__submit" type="button">Start Quiz</button>
+
+  </div>
+
+</div>
 </body>
 </html>
