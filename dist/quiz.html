@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movie Kings – Quiz</title>
+  <link rel="stylesheet" href="styles/main.min.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="quiz-navbar">
+    <a href="index.html" class="quiz-navbar__brand">
+      <img src="images/logo.svg" alt="Movie Kings logo">
+      Movie Kings
+    </a>
+    <a href="index.html" class="quiz-navbar__stop">Stop Quiz</a>
+  </header>
+
+  <!-- BANDE NOIRE -->
+  <div class="quiz-bar"></div>
+
+  <!-- ZONE PRINCIPALE -->
+  <main class="quiz-main">
+    <div class="quiz-container">
+
+      <!-- PROGRESS BAR -->
+      <div class="quiz-progress">
+        <div class="quiz-progress__meta">
+          <span class="quiz-progress__label" id="progress-label">Question 1 of 10</span>
+          <span class="quiz-progress__pct" id="progress-pct">10%</span>
+        </div>
+        <div class="quiz-progress__track">
+          <div class="quiz-progress__fill" id="progress-fill"></div>
+        </div>
+      </div>
+
+      <!-- CARTE QUIZ -->
+      <div class="quiz-card" id="quiz-card">
+
+        <!-- Citation en violet -->
+        <p class="quiz-quote" id="quiz-quote">"Here's looking at you, kid."</p>
+
+        <!-- Grille 2x2 des réponses -->
+        <div class="quiz-answers" id="quiz-answers">
+
+          <label class="quiz-answer">
+            <input type="radio" name="answer" value="0">
+            <div class="quiz-answer__content">
+              <span class="quiz-answer__title">Casablanca</span>
+              <span class="quiz-answer__director">— Michael Curtiz</span>
+              <span class="quiz-answer__year">1942</span>
+            </div>
+          </label>
+
+          <label class="quiz-answer">
+            <input type="radio" name="answer" value="1">
+            <div class="quiz-answer__content">
+              <span class="quiz-answer__title">Gone with the Wind</span>
+              <span class="quiz-answer__director">— Victor Fleming</span>
+              <span class="quiz-answer__year">1939</span>
+            </div>
+          </label>
+
+          <label class="quiz-answer">
+            <input type="radio" name="answer" value="2">
+            <div class="quiz-answer__content">
+              <span class="quiz-answer__title">The Maltese Falcon</span>
+              <span class="quiz-answer__director">— John Huston</span>
+              <span class="quiz-answer__year">1941</span>
+            </div>
+          </label>
+
+          <label class="quiz-answer">
+            <input type="radio" name="answer" value="3">
+            <div class="quiz-answer__content">
+              <span class="quiz-answer__title">Citizen Kane</span>
+              <span class="quiz-answer__director">— Orson Welles</span>
+              <span class="quiz-answer__year">1941</span>
+            </div>
+          </label>
+
+        </div>
+
+        <!-- Footer -->
+        <div class="quiz-card__footer">
+          <button class="quiz-submit" id="submit-btn" disabled>Submit Answer</button>
+        </div>
+
+      </div>
+
+    </div>
+  </main>
+
+  <script>
+    const answers = document.querySelectorAll('.quiz-answer input[type="radio"]');
+    const submitBtn = document.getElementById('submit-btn');
+
+    answers.forEach(radio => {
+      radio.addEventListener('change', () => {
+        submitBtn.classList.add('is-active');
+        submitBtn.disabled = false;
+      });
+    });
+  </script>
+
+</body>
+</html>
