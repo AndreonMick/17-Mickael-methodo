@@ -846,8 +846,8 @@ body {
 /* La mascotte absolute dans la catégorie */
 .overlay-category__deco {
   position: absolute;
-  top: 10rem;
-  right: -17rem;
+  top: 22rem;
+  right: 27rem;
   transform: translateY(-60%);
   width: 300px;
   height: auto;
