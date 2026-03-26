@@ -981,6 +981,20 @@ body {
 /* ============================================================
    QUIZ PAGE
 ============================================================ */
+@keyframes mascot-hello {
+  0% {
+    transform: scale(1) rotate(0deg);
+  }
+  25% {
+    transform: scale(1.15) rotate(-12deg);
+  }
+  75% {
+    transform: scale(1.15) rotate(12deg);
+  }
+  100% {
+    transform: scale(1.15) rotate(0deg);
+  }
+}
 /* ── Navbar blanche ── */
 .quiz-navbar {
   display: flex;
@@ -1005,6 +1019,14 @@ body {
 .quiz-navbar__brand img {
   width: 36px;
   height: 36px;
+  display: block;
+  transition: transform 0.3s ease-out;
+  /* On définit le point de rotation en bas au milieu 
+     pour que la mascotte semble "posée" sur la ligne */
+  transform-origin: bottom center;
+}
+.quiz-navbar__brand:hover img {
+  animation: mascot-hello 0.6s ease-in-out;
 }
 
 .quiz-navbar__stop {
